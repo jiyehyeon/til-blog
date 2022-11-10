@@ -2,6 +2,7 @@ import React from "react";
 import type { HeadFC } from "gatsby";
 import type { PageProps } from "gatsby";
 import { graphql } from "gatsby";
+import Layout from "../components/common/Layout";
 
 const IndexPage = function () {
   return <>Home</>;
@@ -21,7 +22,9 @@ type HeadProps = {
 };
 
 export const Head: HeadFC<HeadProps> = ({ data }) => (
-  <title>{data.site.siteMetadata.title}</title>
+  <Layout path={window.location.pathname}>
+    <title>{data.site.siteMetadata.title}</title>
+  </Layout>
 );
 
 export const metaDataQuery = graphql`

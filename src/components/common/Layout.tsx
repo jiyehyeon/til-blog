@@ -1,13 +1,20 @@
-import React from "react";
+import React, { FunctionComponent, ReactElement, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import GlobalStyle from "./GlobalStyle";
 
-const Layout = ({ children }) => {
+type LayoutProps = {
+  children: ReactElement;
+  path: string;
+};
+
+const Layout: FunctionComponent<LayoutProps> = ({ children, path }) => {
+  console.log(path);
+
   return (
     <div>
       <GlobalStyle />
-      <Header />
+      <Header path={path} />
       {children}
       <Footer />
     </div>
