@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql, PageProps } from "gatsby";
 
-const Header: FunctionComponent = function () {
+const Header = function () {
   return (
     <header>
       <h1>이름을 아직 못정한 블로그</h1>

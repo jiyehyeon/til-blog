@@ -1,20 +1,10 @@
-import * as React from "react";
+import React from "react";
 import type { HeadFC } from "gatsby";
 import type { PageProps } from "gatsby";
 import { graphql } from "gatsby";
-import { Global } from "@emotion/react";
-import GlobalStyle from "../components/common/GlobalStyle";
-import Header from "../components/common/Header";
-import HomePage from "./home";
 
 const IndexPage = function () {
-  return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <HomePage />
-    </>
-  );
+  return <>Home</>;
 };
 
 export default IndexPage;

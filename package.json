@@ -1,9 +1,9 @@
 {
-  "name": "dev-log",
+  "name": "til-blog",
   "version": "1.0.0",
   "private": true,
-  "description": "dev-log",
-  "author": "[AI5/1반] 현지예",
+  "description": "til-blog",
+  "author": "Jiye Hyeon",
   "keywords": [
     "gatsby"
   ],
@@ -21,6 +21,7 @@
     "gatsby": "^4.24.7",
     "gatsby-plugin-emotion": "^7.24.0",
     "gatsby-plugin-netlify-cms": "^6.24.0",
+    "gatsby-remark-images": "^7.0.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-remark": "^5.24.0",
     "netlify-cms-app": "^2.15.72",
