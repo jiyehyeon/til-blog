@@ -5,7 +5,11 @@ import { graphql } from "gatsby";
 import Layout from "../components/common/Layout";
 
 const IndexPage = function () {
-  return <>Home</>;
+  return (
+    <Layout path={window.location.pathname}>
+      <title>Home</title>
+    </Layout>
+  );
 };
 
 export default IndexPage;
@@ -22,9 +26,7 @@ type HeadProps = {
 };
 
 export const Head: HeadFC<HeadProps> = ({ data }) => (
-  <Layout path={window.location.pathname}>
-    <title>{data.site.siteMetadata.title}</title>
-  </Layout>
+  <title>{data.site.siteMetadata.title}</title>
 );
 
 export const metaDataQuery = graphql`
