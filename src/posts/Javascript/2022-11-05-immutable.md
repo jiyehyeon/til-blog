@@ -13,54 +13,19 @@ tags: ["Type"]
 
 원본이 바뀐 것이 아니라, 다른 메모리 영역에 새로 할당된 것이다.
 
-<div style="display: flex; justify-content:center;">
-<div style="width: 40%;">
-<table style="background-color: #F7F7F7; text-align:center; border-radius: 1.2em;">
-<thead>
-<tr>
-<th>Address</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>~</td>
-<td>Number</td>
-</tr>
-<tr>
-<td>~</td>
-<td>String</td>
-</tr>
-<tr><td>~</td>
-<td>Boolean</td>
-</tr>
-<tr><td>~</td>
-<td>Address</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div style="width: 40%;">
-<table style="background-color: #F7F7F7; text-align:center; border-radius: 1.2em;">
-<thead>
-<tr>
-<th>Address</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ABCDEFGH</td>
-<td>Array</td>
-</tr>
-<tr>
-<td>19ASDF39</td>
-<td>Object</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+`<Stack>`
+| Address | Value |
+| ------------ | ------------- |
+| ~ | Number |
+| ~ | String |
+| ~ | Boolean |
+| ~ | Address |
+
+`<Heap>`
+| Address | Value |
+| ------------ | ------------- |
+| ABCDEFGH | Array |
+| 19ASDF39 | Object |
 
 위처럼, 원시타입들은 콜스택에 저장되고 참조타입은 힙에 저장되는 대신 해당 주소만 콜스택에 저장된다.
 
