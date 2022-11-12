@@ -21,8 +21,8 @@ const PostListWrapper = styled.div`
 const PostList: FunctionComponent<PostProps> = function ({ posts }) {
   return (
     <PostListWrapper>
-      {posts.map((post) => (
-        <PostList contents={post} />
+      {posts.map((post, idx) => (
+        <PostListItem key={idx} contents={post} />
       ))}
     </PostListWrapper>
   );

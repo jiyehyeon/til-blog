@@ -41,10 +41,6 @@ const MENUITEMS: { [key: string]: string } = {
   // intro: "🧏🏻‍♂️",
 };
 
-type CategoryItemProps = {
-  active: boolean;
-};
-
 type HeaderProps = {
   path: string;
 };
