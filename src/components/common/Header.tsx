@@ -50,7 +50,9 @@ const Header: FunctionComponent<HeaderProps> = function ({ path }) {
 
   return (
     <HeaderWrapper>
-      <Logo>이름을 아직 못정한 블로그</Logo>
+      <Link to={"/"}>
+        <Logo>이름을 아직 못정한 블로그</Logo>
+      </Link>
       <Navigation>
         {Object.entries(MENUITEMS).map(([id, title]) => (
           <NavigationItem key={id} to={`/${id}`} active={path.includes(id)}>
