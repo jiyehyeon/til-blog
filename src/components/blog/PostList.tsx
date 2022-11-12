@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import PostListItem from "./PostListItem";
 import styled from "@emotion/styled";
 
@@ -18,7 +18,7 @@ const PostListWrapper = styled.div`
   }
 `;
 
-const PostList: FunctionComponent<PostProps> = function ({ posts }) {
+const PostList = function ({ posts }: PostProps) {
   return (
     <PostListWrapper>
       {posts.map((post, idx) => (

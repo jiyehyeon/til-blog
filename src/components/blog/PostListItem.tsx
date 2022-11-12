@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 
 type PostProps = {
   contents: any;
@@ -36,11 +37,17 @@ const TagItem = styled.a`
 
 const PostListItem: FunctionComponent<PostProps> = function ({ contents }) {
   const { title, tags, date } = contents.node.frontmatter;
+  const path = contents.node.fileAbsolutePath
+    .split("/")
+    .pop()
+    .replace(".md", "");
 
   return (
     <ItemWrapper>
       <TextBox>
-        <Title>{title}</Title>
+        <Link to={`/blog/${path}`}>
+          <Title>{title}</Title>
+        </Link>
         <TagList>
           {tags.map((tag: string) => (
             <TagItem key={tag}>#{tag}</TagItem>
