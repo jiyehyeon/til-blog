@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 const FooterWrapper = styled.footer`
   /* Box & Display */
   width: 100%;
-  padding: 25px 75px;
+  padding: 25px 0;
   position: absolute;
   bottom: 0;
 

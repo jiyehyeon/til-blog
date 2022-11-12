@@ -11,6 +11,10 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   position: fixed;
 
+  @media (max-width: 1020px) {
+    padding: 25px 45px;
+  }
+
   /* Color */
   background-color: #fff;
 
@@ -31,10 +35,10 @@ const NavigationItem = styled(Link)<{ active: boolean }>`
 `;
 
 const MENUITEMS: { [key: string]: string } = {
-  blog: "블로그",
-  projects: "포트폴리오",
-  book: "📚",
-  intro: "🧏🏻‍♂️",
+  blog: "📚 TIL",
+  // projects: "포트폴리오",
+  // book: "📚",
+  // intro: "🧏🏻‍♂️",
 };
 
 type CategoryItemProps = {
