@@ -9,13 +9,14 @@ type BlogPageProps = {
   data: {
     allMarkdownRemark: any;
   };
+  location: any;
 };
 
 const PageWrapper = styled.div`
   display: flex;
 `;
 
-const BlogPage = ({ data }: BlogPageProps) => {
+const BlogPage = ({ data, location }: BlogPageProps) => {
   const posts = data.allMarkdownRemark.edges;
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -34,7 +35,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
   console.log(categories);
 
   return (
-    <Layout path={window.location.pathname}>
+    <Layout path={location.pathname}>
       <PageWrapper>
         <title>{selectedCategory}</title>
         <CategoryList

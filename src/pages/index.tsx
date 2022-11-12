@@ -32,7 +32,7 @@ const Heading = styled.h1`
   width: 100%;
 `;
 
-const IndexPage = function () {
+const IndexPage = function ({ location }: any) {
   return (
     <Layout path={window.location.pathname}>
       <PageWrapper>
