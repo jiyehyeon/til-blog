@@ -64,7 +64,7 @@ export const query = graphql`
             }
           }
           fileAbsolutePath
-          excerpt(format: MARKDOWN)
+          excerpt
           frontmatter {
             date(formatString: "YYYY-MM-DD")
             title
