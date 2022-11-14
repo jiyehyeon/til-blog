@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-emotion",
-    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -28,6 +27,19 @@ const config: GatsbyConfig = {
         name: "blogs",
         path: "./src/posts",
         ignore: [`.md`],
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [`gatsby-remark-prismjs`],
+        options: {
+          classPrefix: "language-",
+          inlineCodeMarker: null,
+          aliases: {},
+          showLineNumbers: true,
+          noInlineHighlight: false,
+        },
       },
     },
   ],

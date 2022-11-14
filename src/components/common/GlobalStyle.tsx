@@ -1,7 +1,15 @@
 import React from "react";
 import { Global, css } from "@emotion/react";
+import "prismjs/themes/prism-solarizedlight.css";
 
 const defaultStyle = css`
+  :root {
+    --base-color: #0061ff;
+    --base-grey: #90949a;
+    --base-dark-blue: #333e4c;
+    --base-dark: #2f2f37;
+  }
+
   @font-face {
     font-family: "LINESeedKR";
     src: url("../../assets/fonts/EOT/LINESeedKR-Th.eot")
@@ -50,6 +58,20 @@ const defaultStyle = css`
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .gatsby-highlight {
+    border-radius: 0.5em;
+    margin: 0.5em 0;
+    font-size: 0.9em;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    border-radius: 0.5em;
+    background-color: #fdfaf6;
   }
 `;
 
