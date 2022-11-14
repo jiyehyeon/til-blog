@@ -35,7 +35,7 @@ const NavigationItem = styled(Link)<{ active: boolean }>`
 `;
 
 const MENUITEMS: { [key: string]: string } = {
-  blog: "📚 TIL",
+  "blog/all": "📚 TIL",
   // projects: "포트폴리오",
   // book: "📚",
   // intro: "🧏🏻‍♂️",

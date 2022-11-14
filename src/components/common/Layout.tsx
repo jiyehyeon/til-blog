@@ -10,8 +10,18 @@ type LayoutProps = {
 };
 
 const Contents = styled.div`
+  display: flex;
+  justify-content: center;
   padding: 100px 0;
   min-height: 100vh;
+
+  @media (max-width: 1180px) {
+    padding: 100px 75px;
+  }
+
+  @media (max-width: 1020px) {
+    padding: 100px 45px;
+  }
 `;
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, path }) => {

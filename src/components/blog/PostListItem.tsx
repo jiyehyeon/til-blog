@@ -8,23 +8,20 @@ type PostProps = {
 
 const ItemWrapper = styled.div`
   width: 100%;
+  margin-bottom: 45px;
 `;
 
-const ImgBox = styled.img``;
-
-const TextBox = styled.div``;
-
 const Title = styled.h1`
-  font-size: 19px;
+  font-size: 20px;
   color: #000;
-  margin: 12px 0;
   font-weight: 700;
   line-height: 1.6;
 `;
 
 const Date = styled.div`
   font-size: 14px;
-  color: rgb(41, 41, 41);
+  margin: 12px 0;
+  color: rgba(0, 0, 0, 0.4);
 `;
 
 const TagList = styled.div``;
@@ -37,24 +34,26 @@ const TagItem = styled.a`
 
 const PostListItem: FunctionComponent<PostProps> = function ({ contents }) {
   const { title, tags, date } = contents.node.frontmatter;
-  const path = contents.node.fileAbsolutePath
+  const category = contents.node.frontmatter.category.toLowerCase();
+  const pathname = contents.node.fileAbsolutePath
     .split("/")
     .pop()
     .replace(".md", "");
 
   return (
     <ItemWrapper>
-      <TextBox>
-        <Link to={`/blog/${path}`}>
-          <Title>{title}</Title>
-        </Link>
-        <TagList>
-          {tags.map((tag: string) => (
+      <Link to={`/blog/${category}/${pathname}`}>
+        <Title>{title}</Title>
+      </Link>
+
+      <Date>{date}</Date>
+      <TagList>
+        {tags.map((tag: string) => (
+          <Link to={`/search?tag=${tag.replace(" ", "")}`}>
             <TagItem key={tag}>#{tag}</TagItem>
-          ))}
-        </TagList>
-        <Date>{date}</Date>
-      </TextBox>
+          </Link>
+        ))}
+      </TagList>
     </ItemWrapper>
   );
 };
