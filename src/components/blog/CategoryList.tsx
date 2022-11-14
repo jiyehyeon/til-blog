@@ -4,9 +4,19 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 const CategoryListWrapper = styled.div`
-  width: 190px;
-  float: left;
-  margin-top: 6px;
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: 600px) {
+    width: 190px;
+    float: left;
+    margin-top: 6px;
+  }
 `;
 
 const CategoryItem = styled.div<{ selected: boolean }>`

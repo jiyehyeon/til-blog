@@ -26,6 +26,10 @@ const ContentsWrapper = styled.article`
   width: 1020px;
   color: var(--base-dark);
   line-height: 1.6;
+
+  @media (max-width: 1170px) {
+    width: 100%;
+  }
 `;
 
 const TitleSection = styled.section`
@@ -58,7 +62,7 @@ const Line = styled.div`
   height: 1px;
   margin: 12px 0;
   background-color: rgba(0, 0, 0, 0.1);
-  width: 1020px;
+  width: 100%;
 `;
 
 const BlogPost = ({ data }: BlogPostProps) => {

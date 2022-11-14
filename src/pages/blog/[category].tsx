@@ -18,6 +18,10 @@ const PageWrapper = styled.div`
   display: flex;
   width: 1020px;
   padding-top: 20px;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `;
 
 const BlogPage = ({ data, location, params }: BlogPageProps) => {

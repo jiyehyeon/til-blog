@@ -20,6 +20,11 @@ const SectionStyled = styled.section`
   @media (max-width: 1020px) {
     padding: 0 45px;
   }
+
+  @media (max-width: 600px) {
+    width: 100vw;
+    padding: 0 45px;
+  }
 `;
 
 const Heading = styled.h1`
