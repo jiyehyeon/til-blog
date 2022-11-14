@@ -1,5 +1,6 @@
 ---
 title: "gatsby 레이아웃 언마운트 되지 않게 설정하기"
+category: "etc"
 date: "2022-11-10"
 tags: ["gatsby", "gatsby blog"]
 ---

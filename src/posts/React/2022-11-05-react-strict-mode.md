@@ -1,5 +1,6 @@
 ---
 title: "React Strict Mode"
+category: "React"
 date: "2022-11-05"
 tags: []
 ---

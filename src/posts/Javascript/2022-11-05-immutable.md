@@ -1,5 +1,6 @@
 ---
 title: "자바스크립트 불변성"
+category: "Javascript"
 date: "2022-11-05"
 tags: ["Type"]
 ---

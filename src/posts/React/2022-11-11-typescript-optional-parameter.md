@@ -1,5 +1,6 @@
 ---
 title: "타입스크립트에서의 옵셔널 파라미터 설정"
+category: "React"
 date: "2022-11-11"
 tags: ["typescript", "error"]
 ---
