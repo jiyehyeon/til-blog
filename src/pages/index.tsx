@@ -34,7 +34,7 @@ const Heading = styled.h1`
 
 const IndexPage = function ({ location }: any) {
   return (
-    <Layout path={window.location.pathname}>
+    <Layout path={location.pathname}>
       <PageWrapper>
         <SectionStyled>
           <Heading>최신글</Heading>
