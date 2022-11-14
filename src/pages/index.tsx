@@ -1,7 +1,5 @@
 import React from "react";
-import type { HeadFC } from "gatsby";
-import type { PageProps } from "gatsby";
-import { graphql } from "gatsby";
+import { HeadFC, navigate, graphql } from "gatsby";
 import Layout from "../components/common/Layout";
 import PostCardList from "../components/main/PostCardList";
 import styled from "@emotion/styled";
@@ -25,6 +23,7 @@ const SectionStyled = styled.section`
 `;
 
 const Heading = styled.h1`
+  color: var(--base-dark);
   display: inline-block;
   font-weight: 700;
   font-size: 20px;

@@ -23,7 +23,7 @@ const TextBox = styled.div`
 
 const Title = styled.h1`
   font-size: 19px;
-  color: #000;
+  color: var(--base-dark);
   margin: 12px 0;
   font-weight: 700;
   line-height: 1.6;
@@ -31,7 +31,7 @@ const Title = styled.h1`
 
 const Date = styled.div`
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--base-grey);
   font-weight: 400;
   margin-top: 16px;
 
@@ -50,7 +50,7 @@ const TagList = styled.div`
 const TagItem = styled.a`
   font-size: 14px;
   margin-right: 15px;
-  color: rgb(0, 198, 142);
+  color: var(--base-color);
 `;
 
 const PostCard: FunctionComponent<PostProps> = function ({ contents }) {

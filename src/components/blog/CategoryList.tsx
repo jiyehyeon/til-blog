@@ -10,7 +10,8 @@ const CategoryListWrapper = styled.div`
 `;
 
 const CategoryItem = styled.div<{ selected: boolean }>`
-  color: ${({ selected }) => (selected ? "#175bfc" : "#000")};
+  color: ${({ selected }) =>
+    selected ? "var(--base-color)" : "var(--base-dark)"};
   font-weight: ${({ selected }) => (selected ? "700" : "400")};
   font-size: 16px;
   margin-bottom: 16px;

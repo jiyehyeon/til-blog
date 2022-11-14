@@ -29,7 +29,7 @@ const Navigation = styled.div`
 `;
 
 const NavigationItem = styled(Link)<{ active: boolean }>`
-  color: ${({ active }) => (active ? "#000" : "rgba(0, 0, 0, 0.5)")};
+  color: ${({ active }) => (active ? "var(--base-dark)" : "var(--base-grey)")};
   font-weight: ${({ active }) => (active ? "800" : "400")};
   margin: 0 20px;
 `;
