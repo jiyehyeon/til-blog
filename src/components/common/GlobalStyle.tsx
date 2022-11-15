@@ -8,6 +8,7 @@ const defaultStyle = css`
     --base-grey: #90949a;
     --base-dark-blue: #333e4c;
     --base-dark: #2f2f37;
+    --pastel-background: #fdfaf6;
   }
 
   @font-face {
@@ -71,7 +72,7 @@ const defaultStyle = css`
   code[class*="language-"],
   pre[class*="language-"] {
     border-radius: 0.5em;
-    background-color: #fdfaf6;
+    background-color: var(--pastel-background);
   }
 `;
 

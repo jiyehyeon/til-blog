@@ -50,6 +50,19 @@ const ContentSection = styled.section`
   }
   line-height: 1.8;
   font-size: 16px;
+
+  aside {
+    background-color: var(--pastel-background);
+    border-radius: 0.5em;
+    padding: 16px 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 10px;
+  }
 `;
 
 const Category = styled.h1`

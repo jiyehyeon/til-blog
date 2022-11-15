@@ -6,12 +6,12 @@ tags: ["eventHandler", "event"]
 ---
 
 <aside>
-💡 `currentTarget` **: 이벤트 리스너가 달린 요소**
+💡 currentTarget: 이벤트 리스너가 달린 요소
 
 </aside>
 
 <aside>
-💡 `target` **: 실제 이벤트가 발생한 요소 (클릭이벤트일 경우, 클릭된 대상 = 자식노드가 될 수 있음)**
+💡  target: 실제 이벤트가 발생한 요소 (클릭이벤트일 경우, 클릭된 대상 = 자식노드가 될 수 있음)
 
 </aside>
 
