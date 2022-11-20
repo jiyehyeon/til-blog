@@ -14,11 +14,11 @@ const SectionStyled = styled.section`
 
   @media (max-width: 1170px) {
     width: 100%;
-    padding: 0 75px;
+    padding: 0px;
   }
 
   @media (max-width: 1020px) {
-    padding: 0 45px;
+    padding: 0px;
   }
 
   @media (max-width: 600px) {
@@ -31,18 +31,22 @@ const Heading = styled.h1`
   color: var(--base-dark);
   display: inline-block;
   font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 32px;
+  margin-top: 20px;
   width: 100%;
 `;
 
-const IndexPage = function ({ location }: any) {
+const IndexPage = function ({ location, data }: any) {
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <Layout path={location.pathname}>
       <PageWrapper>
         <SectionStyled>
-          <Heading>최신글</Heading>
-          <PostCardList posts={[{}]} />
+          <Heading>
+            LATEST<br></br>POSTS
+          </Heading>
+          <PostCardList posts={posts} />
         </SectionStyled>
       </PageWrapper>
     </Layout>
@@ -66,8 +70,29 @@ export const Head: HeadFC<HeadProps> = ({ data }) => (
   <title>{data.site.siteMetadata.title}</title>
 );
 
-export const metaDataQuery = graphql`
-  {
+export const indexQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
+      edges {
+        node {
+          parent {
+            ... on File {
+              dir
+            }
+          }
+          fileAbsolutePath
+          frontmatter {
+            date(formatString: "YYYY-MM-DD")
+            title
+            category
+            tags
+          }
+        }
+      }
+    }
     site {
       siteMetadata {
         title

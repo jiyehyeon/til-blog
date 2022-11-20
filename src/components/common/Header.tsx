@@ -7,47 +7,52 @@ const HeaderWrapper = styled.header`
   width: 100%;
   padding: 25px 75px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
+  justify-content: center;
 
   @media (max-width: 1020px) {
     padding: 25px 45px;
   }
 
   /* Color */
-  background-color: #fff;
-
-  /* Border */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.01);
 `;
 
-const Logo = styled.div``;
+const InnerWrapper = styled.div`
+  width: 1020px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Logo = styled.div`
+  font-weight: 800;
+`;
 
 const Navigation = styled.div`
   font-size: 15px;
 `;
 
 const NavigationItem = styled(Link)<{ active: boolean }>`
-  color: ${({ active }) => (active ? "var(--base-dark)" : "var(--base-grey)")};
+  color: ${({ active }) => (active ? "var(--base-color)" : "var(--base-dark)")};
   font-weight: ${({ active }) => (active ? "800" : "400")};
   margin: 0 20px;
   &:hover {
-    color: var(--base-dark);
+    color: var(--base-color);
   }
 `;
 
 const NavigationLinkItem = styled.a`
-  color: var(--base-grey);
+  color: var(--base-dark);
 
   &:hover {
-    color: var(--base-dark);
+    color: var(--base-color);
   }
 `;
 
 const MENUITEMS: { [key: string]: string } = {
-  "blog/all": "📚 TIL",
-  // projects: "포트폴리오",
+  "blog/all": "TODAY I LEARNED",
+  projects: "PROJECTS",
+  about: "ABOUT",
   // book: "📚",
   // intro: "🧏🏻‍♂️",
 };
@@ -61,19 +66,21 @@ const Header: FunctionComponent<HeaderProps> = function ({ path }) {
 
   return (
     <HeaderWrapper>
-      <Link to={"/"}>
-        <Logo>이름을 아직 못정한 블로그</Logo>
-      </Link>
-      <Navigation>
-        {Object.entries(MENUITEMS).map(([id, title]) => (
-          <NavigationItem key={id} to={`/${id}`} active={path.includes(id)}>
-            {title}
-          </NavigationItem>
-        ))}
+      <InnerWrapper>
+        <Link to={"/"}>
+          <Logo>JIYE HYEON ⓒ</Logo>
+        </Link>
+        <Navigation>
+          {Object.entries(MENUITEMS).map(([id, title]) => (
+            <NavigationItem key={id} to={`/${id}`} active={path.includes(id)}>
+              {title}
+            </NavigationItem>
+          ))}
+        </Navigation>
         <NavigationLinkItem href="https://github.com/jiyehyeon" target="_blank">
           Github
         </NavigationLinkItem>
-      </Navigation>
+      </InnerWrapper>
     </HeaderWrapper>
   );
 };

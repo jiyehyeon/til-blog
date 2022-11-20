@@ -4,15 +4,15 @@ import styled from "@emotion/styled";
 const FooterWrapper = styled.footer`
   /* Box & Display */
   width: 100%;
-  padding: 25px 0;
+  padding: 25px;
   position: absolute;
   bottom: 0;
 
   /* Color */
-  background-color: #fff;
+  // background-color: rgba(0, 0, 0, 0.01);
 
   /* Border */
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  // border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   /* Text */
   font-size: 12px;
