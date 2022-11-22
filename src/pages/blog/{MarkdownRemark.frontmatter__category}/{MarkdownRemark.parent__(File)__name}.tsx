@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../../components/common/Layout";
 import styled from "@emotion/styled";
+import { Comments } from "../../../components/blog/Comments";
 
 type BlogPostProps = {
   data: {
@@ -40,7 +41,7 @@ const TitleSection = styled.section`
 
 const Date = styled.p`
   color: var(--base-grey);
-  font-size: 18px;
+  font-weight: 300;
 `;
 
 const ContentSection = styled.section`
@@ -61,14 +62,15 @@ const ContentSection = styled.section`
 `;
 
 const Category = styled.h1`
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
   color: var(--base-color);
 `;
 
 const Line = styled.div`
   height: 1px;
-  margin: 12px 0;
+  margin: 30px 0 15px 0;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
 `;
@@ -94,6 +96,8 @@ const BlogPost = ({ data }: BlogPostProps) => {
               dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
           </ContentSection>
+          <Line />
+          <Comments />
         </ContentsWrapper>
       </PageWrapper>
     </Layout>
