@@ -29,15 +29,15 @@ tags: ["debouncing", "throttle", "treeshaking"]
 
 이를 방지하기 위해 일정 시간 이벤트 핸들러 호출을 막는 기법이다.
 
-```
+```javascript
 const debound = (callback, delay) => {
-    let timerId;
+  let timerId;
 
-    return event => {
-        if(timerId) clearTimeout(timerId);
-        timerId = setTimeout(callback, delay, event);
-    }
-}
+  return (event) => {
+    if (timerId) clearTimeout(timerId);
+    timerId = setTimeout(callback, delay, event);
+  };
+};
 ```
 
 쉽게 말해서, 수강신청 같은걸 할때 여러 학생들이 무한번 다다닥 클릭하게 되면
@@ -46,7 +46,7 @@ const debound = (callback, delay) => {
 
 ## 스로틀(Throttle)
 
-<img src="https://user-images.githubusercontent.com/66620948/203308275-50144c02-7661-495e-9ec1-3018145b6c6d.png" width="60%"/>
+<img src="https://user-images.githubusercontent.com/66620948/203308275-50144c02-7661-495e-9ec1-3018145b6c6d.png" width="80%"/>
 
 스로틀은 디바운스를 쓰는 상황과 마찬가지로
 
@@ -75,7 +75,7 @@ const throttle = (callback, delay) => {
 
 디바운스같은 경우 사용자가 연속클릭한 순간에 setTimeout을 통해 콜백함수를
 
-delay시켰다가 시키는거기 때문에 이미 사용자가 클릭을 다 끝낸 이후에 콜백함수가 호출될 수 있다.
+delay시키는거기 때문에 이미 사용자가 클릭을 다 끝낸 이후에 콜백함수가 호출될 수 있다.
 <br><br>
 ![throttle](https://miro.medium.com/max/466/1*u-vpz-_beUBZ6OhjZKYUNw.gif)
 
