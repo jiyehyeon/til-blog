@@ -58,11 +58,6 @@ const ContentSection = styled.section`
     margin-bottom: 10px;
     font-weight: 600;
   }
-
-  a {
-    display: inline-block;
-    margin-top: 10px;
-  }
 `;
 
 const Category = styled.h1`

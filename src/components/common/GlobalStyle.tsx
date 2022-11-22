@@ -1,6 +1,6 @@
 import React from "react";
 import { Global, css } from "@emotion/react";
-import "prismjs/themes/prism-solarizedlight.css";
+import "prismjs/themes/prism.css";
 
 const defaultStyle = css`
   :root {
@@ -62,17 +62,26 @@ const defaultStyle = css`
   }
 
   .gatsby-highlight {
+    max-width: 1020px;
     border-radius: 0.5em;
     margin: 0.5em 0;
     font-size: 0.9em;
-    padding: 1em;
     overflow: auto;
   }
 
   code[class*="language-"],
   pre[class*="language-"] {
     border-radius: 0.5em;
+  }
+
+  blockquote {
+    margin: 30px 0px 20px 0px;
+    padding: 15px 10px 15px 20px;
+    border-left: 5px solid var(--base-color);
     background-color: var(--pastel-background);
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: auto;
   }
 `;
 
