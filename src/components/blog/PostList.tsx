@@ -8,6 +8,7 @@ export type PostProps = {
 
 const PostListWrapper = styled.div`
   width: 100%;
+  max-width: 780px;
 `;
 
 const PostList = function ({ posts }: PostProps) {

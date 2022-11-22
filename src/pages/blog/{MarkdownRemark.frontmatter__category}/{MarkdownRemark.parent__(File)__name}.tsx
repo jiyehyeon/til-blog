@@ -24,7 +24,9 @@ const PageWrapper = styled.main`
 `;
 
 const ContentsWrapper = styled.article`
-  width: 1020px;
+  width: 760px;
+  padding-top: 30px;
+
   color: var(--base-dark);
   line-height: 1.6;
 

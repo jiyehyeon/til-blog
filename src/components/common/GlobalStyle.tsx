@@ -4,11 +4,11 @@ import "prismjs/themes/prism.css";
 
 const defaultStyle = css`
   :root {
-    --base-color: #333e4c;
+    --base-color: rgb(0, 198, 142);
     --base-grey: #90949a;
     --base-dark-blue: #333e4c;
     --base-dark: #2f2f37;
-    --pastel-background: #fdfaf6;
+    --pastel-background: rgba(150, 198, 142, 0.05);
   }
 
   @font-face {

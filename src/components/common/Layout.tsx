@@ -17,11 +17,11 @@ const Contents = styled.div`
   min-height: 100vh;
 
   @media (max-width: 1180px) {
-    padding: 100px 75px;
+    padding: 5px 75px 100px 75px;
   }
 
   @media (max-width: 1020px) {
-    padding: 100px 45px;
+    padding: 5px 45px 100px 45px;
   }
 `;
 

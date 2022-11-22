@@ -22,7 +22,7 @@ const Heading = styled.h1`
 `;
 
 const Keyword = styled.p`
-  color: #175bfc;
+  color: var(--base-color);
 `;
 
 const PageWrapper = styled.div`
