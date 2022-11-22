@@ -4,7 +4,7 @@ import "prismjs/themes/prism.css";
 
 const defaultStyle = css`
   :root {
-    --base-color: rgb(0, 198, 142);
+    --base-color: #333e4c;
     --base-grey: #90949a;
     --base-dark-blue: #333e4c;
     --base-dark: #2f2f37;
