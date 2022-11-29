@@ -19,6 +19,7 @@ type BlogPostProps = {
 };
 
 const PageWrapper = styled.main`
+  width: 100%;
   display: flex;
   justify-content: center;
 `;
@@ -30,7 +31,7 @@ const ContentsWrapper = styled.article`
   color: var(--base-dark);
   line-height: 1.6;
 
-  @media (max-width: 1170px) {
+  @media (max-width: 760px) {
     width: 100%;
   }
 `;
@@ -93,11 +94,9 @@ const BlogPost = ({ data }: BlogPostProps) => {
             <Date>{`${year}년 ${month}월 ${day}일`}</Date>
           </TitleSection>
           <Line />
-          <ContentSection>
-            <div
-              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-            />
-          </ContentSection>
+          <ContentSection
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          ></ContentSection>
           <Line />
           <Comments />
         </ContentsWrapper>
