@@ -49,6 +49,13 @@ const ContentsWrapper = styled.article`
 const TitleSection = styled.section`
   & h1 {
     font-size: 32px;
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 760px) {
+    & h1 {
+      font-size: 20px;
+    }
   }
 `;
 

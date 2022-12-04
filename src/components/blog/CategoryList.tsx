@@ -7,7 +7,7 @@ const CategoryListWrapper = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow-x: auto;
     margin-bottom: 15px;
   }

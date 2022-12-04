@@ -14,6 +14,10 @@ const HeaderWrapper = styled.header`
     padding: 25px 45px;
   }
 
+  @media (max-width: 800px) {
+    padding: 15px;
+  }
+
   /* Color */
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.03);

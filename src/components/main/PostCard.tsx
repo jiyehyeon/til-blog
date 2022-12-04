@@ -31,7 +31,9 @@ const ImgBox = styled.img`
 `;
 
 const TextBox = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 15px;
   padding: 10px 0;
 
@@ -47,15 +49,13 @@ const Title = styled.h1`
 `;
 
 const Date = styled.div`
-  @media (min-width: 600px) {
-    position: absolute;
-    bottom: 10px;
-  }
   font-size: 15px;
   color: var(--base-grey);
   font-weight: 500;
   margin-top: 16px;
 `;
+
+const TopWrapper = styled.div``;
 
 const PostCard: FunctionComponent<PostProps> = function ({ contents }) {
   const { title, tags } = contents.node.frontmatter;
@@ -79,10 +79,12 @@ const PostCard: FunctionComponent<PostProps> = function ({ contents }) {
       />
       {/* </Link> */}
       <TextBox>
-        <Link to={`/blog/${category}/${pathname}`}>
-          <Title>{title}</Title>
-        </Link>
-        <TagList tags={tags} />
+        <TopWrapper>
+          <Link to={`/blog/${category}/${pathname}`}>
+            <Title>{title}</Title>
+          </Link>
+          <TagList tags={tags} />
+        </TopWrapper>
         <Date>{date}</Date>
       </TextBox>
     </PostCardWrapper>

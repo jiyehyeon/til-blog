@@ -8,11 +8,14 @@ export type TagListProps = {
 
 const TagListWrapper = styled.div`
   display: flex;
-  width: 480px;
+  flex-wrap: wrap;
+  width: 100%;
   margin-top: 15px;
 `;
 
 const TagItem = styled.a`
+  display: inline-block;
+  margin-top: 5px;
   font-weight: 400;
   border-radius: 25px;
   border: 1px solid var(--base-color);

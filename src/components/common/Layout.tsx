@@ -23,6 +23,10 @@ const Contents = styled.div`
   @media (max-width: 1020px) {
     padding: 5px 45px 100px 45px;
   }
+
+  @media (max-width: 800px) {
+    padding: 5px 15px 100px 15px;
+  }
 `;
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, path }) => {
