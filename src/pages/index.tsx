@@ -11,20 +11,11 @@ const PageWrapper = styled.div`
 `;
 
 const SectionStyled = styled.section`
-  width: 1020px;
+  max-width: 1020px;
 
   @media (max-width: 1170px) {
     width: 100%;
     padding: 0px;
-  }
-
-  @media (max-width: 1020px) {
-    padding: 0px;
-  }
-
-  @media (max-width: 600px) {
-    width: 100vw;
-    padding: 0 45px;
   }
 `;
 

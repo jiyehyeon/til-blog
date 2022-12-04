@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
   }
 
   @media (max-width: 800px) {
-    padding: 15px;
+    padding: 20px;
   }
 
   /* Color */

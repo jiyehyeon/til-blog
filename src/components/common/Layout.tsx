@@ -25,7 +25,7 @@ const Contents = styled.div`
   }
 
   @media (max-width: 800px) {
-    padding: 5px 15px 100px 15px;
+    padding: 5px 20px 100px 20px;
   }
 `;
 
