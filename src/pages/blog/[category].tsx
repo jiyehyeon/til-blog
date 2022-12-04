@@ -31,7 +31,15 @@ const BlogPage = ({ data, location, params }: BlogPageProps) => {
     (post: any) =>
       post.node.frontmatter.category.toLowerCase() == params.category
   );
-  const categories = ["All", "CS", "React", "Javascript", "Python", "etc"];
+  const categories = [
+    "All",
+    "CS",
+    "React",
+    "Javascript",
+    "Python",
+    "PS",
+    "etc",
+  ];
 
   const isVaildPath = categories.some(
     (elem) => elem.toLowerCase() == params.category
