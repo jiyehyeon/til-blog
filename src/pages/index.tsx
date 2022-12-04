@@ -1,8 +1,9 @@
 import React from "react";
-import { HeadFC, navigate, graphql } from "gatsby";
+import { HeadFC, graphql, CreateSchemaCustomizationArgs } from "gatsby";
 import Layout from "../components/common/Layout";
 import PostCardList from "../components/main/PostCardList";
 import styled from "@emotion/styled";
+import PostCardList2 from "../components/main/PostCardList2";
 
 const PageWrapper = styled.div`
   display: flex;
@@ -28,24 +29,23 @@ const SectionStyled = styled.section`
 `;
 
 const Heading = styled.h1`
-  color: var(--base-dark);
+  color: var(--base-color);
   display: inline-block;
   font-weight: 700;
-  font-size: 32px;
-  margin-top: 20px;
+  font-size: 28px;
+  margin-top: 35px;
   width: 100%;
 `;
 
 const IndexPage = function ({ location, data }: any) {
   const posts = data.allMarkdownRemark.edges;
+  console.log(posts);
 
   return (
     <Layout path={location.pathname}>
       <PageWrapper>
         <SectionStyled>
-          <Heading>
-            LATEST<br></br>POSTS
-          </Heading>
+          <Heading>✍🏻 Latest</Heading>
           <PostCardList posts={posts} />
         </SectionStyled>
       </PageWrapper>
@@ -70,6 +70,21 @@ export const Head: HeadFC<HeadProps> = ({ data }) => (
   <title>{data.site.siteMetadata.title}</title>
 );
 
+export const createSchemaCustomization = ({
+  actions,
+}: CreateSchemaCustomizationArgs) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      thumbnail: String
+    }
+  `;
+  createTypes(typeDefs);
+};
+
 export const indexQuery = graphql`
   query {
     allMarkdownRemark(
@@ -89,6 +104,7 @@ export const indexQuery = graphql`
             title
             category
             tags
+            thumbnail
           }
         }
       }

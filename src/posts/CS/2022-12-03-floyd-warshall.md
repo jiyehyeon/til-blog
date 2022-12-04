@@ -3,6 +3,7 @@ title: "플로이드 워셜 알고리즘"
 category: "CS"
 date: "2022-12-03"
 tags: ["최단경로", "플로이드워셜", "알고리즘"]
+thumbnail: "https://velog.velcdn.com/images/jqdjhy/post/df2162cd-ec47-4a4d-baee-fe15e2a2775b/image.png"
 ---
 
 다익스트라 알고리즘이 특정 시작 노드에서 나머지 모든 노드에 대한 최단경로를 구하는 알고리즘이라면, 플로이드 워셜 알고리즘은 모든 지점에서부터 다른 모든 지점으로의 최단경로를 구하는 알고리즘이다.
