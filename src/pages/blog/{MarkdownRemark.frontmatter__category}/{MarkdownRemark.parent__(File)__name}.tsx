@@ -22,6 +22,22 @@ const PageWrapper = styled.main`
   width: 100%;
   display: flex;
   justify-content: center;
+
+  & hr {
+    margin: 30px 0 15px 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  & blockquote {
+    margin: 10px 0px 10px 0px;
+    padding: 15px 10px 15px 20px;
+    border-left: 5px solid var(--base-color);
+    background-color: var(--pastel-background);
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: auto;
+  }
 `;
 
 const ContentsWrapper = styled.article`
@@ -40,6 +56,10 @@ const TitleSection = styled.section`
   & h1 {
     font-size: 32px;
   }
+`;
+
+const Space = styled.div`
+  height: 30px;
 `;
 
 const Date = styled.p`
@@ -71,13 +91,6 @@ const Category = styled.h1`
   color: var(--base-color);
 `;
 
-const Line = styled.div`
-  height: 1px;
-  margin: 30px 0 15px 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 100%;
-`;
-
 const BlogPost = ({ data }: BlogPostProps) => {
   const post = data.markdownRemark.frontmatter;
   const category = data.markdownRemark.fileAbsolutePath.split("/").slice(-2)[0];
@@ -93,11 +106,11 @@ const BlogPost = ({ data }: BlogPostProps) => {
             <h1>{post.title}</h1>
             <Date>{`${year}년 ${month}월 ${day}일`}</Date>
           </TitleSection>
-          <Line />
+          <Space />
           <ContentSection
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           ></ContentSection>
-          <Line />
+          <hr />
           <Comments />
         </ContentsWrapper>
       </PageWrapper>

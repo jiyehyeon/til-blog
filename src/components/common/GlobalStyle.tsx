@@ -73,16 +73,6 @@ const defaultStyle = css`
   pre[class*="language-"] {
     border-radius: 0.5em;
   }
-
-  blockquote {
-    margin: 30px 0px 20px 0px;
-    padding: 15px 10px 15px 20px;
-    border-left: 5px solid var(--base-color);
-    background-color: var(--pastel-background);
-    font-size: 16px;
-    font-weight: 400;
-    overflow-x: auto;
-  }
 `;
 
 const GlobalStyle = function () {
