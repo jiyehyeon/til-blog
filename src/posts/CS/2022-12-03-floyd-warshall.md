@@ -16,16 +16,19 @@ tags: ["최단경로", "플로이드워셜", "알고리즘"]
 모든 노드들이 중간노드(k)의 역할을 하도록 설정해주어야 하므로 시간복잡도는
 
 반복문을 3번 중첩하여 O(V³)이 된다.
+<br><br>
 
 ## 플로이드 워셜 알고리즘의 특징
 
 - 모든 노드 쌍에 대한 최단거리를 구할 수 있다.
 
 - 음의 가중치를 가지는 그래프에서도 사용할 수 있다.
+  <br><br>
 
 ## 시간복잡도
 
 O(V³)
+<br><br>
 
 ## 구현 코드(Python)
 
@@ -57,12 +60,13 @@ def floydwarshall(n, m):
                 graph[s][e] = min(graph[s][e], graph[s][k] + graph[k][e])
 ```
 
-> ## 관련 문제
+<br>
 
-https://www.acmicpc.net/problem/11403
+> ### 관련 문제
+>
+> https://www.acmicpc.net/problem/11403
 
-> ## 참고 자료
-
-이것이 취업을 위한 코딩테스트다 with 파이썬
-
-https://namu.wiki/w/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%9B%8C%EC%85%9C%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
+> ### 참고 자료
+>
+> - 이것이 취업을 위한 코딩테스트다 with 파이썬
+> - https://namu.wiki/w/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%9B%8C%EC%85%9C%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98

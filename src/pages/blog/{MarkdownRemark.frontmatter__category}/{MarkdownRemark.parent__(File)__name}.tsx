@@ -70,11 +70,12 @@ const Date = styled.p`
 const ContentSection = styled.section`
   & h2 {
     font-size: 24px;
-    margin-top: 20px;
   }
   line-height: 1.8;
   font-size: 16px;
-
+  li {
+    margin-left: 1em;
+  }
   aside {
     background-color: var(--pastel-background);
     border-radius: 0.5em;
