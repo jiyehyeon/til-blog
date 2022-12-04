@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import TagList from "./TagList";
 
 type PostProps = {
   contents: any;
@@ -8,7 +9,6 @@ type PostProps = {
 
 const ItemWrapper = styled.div`
   width: 100%;
-  margin-bottom: 45px;
 `;
 
 const Title = styled.h1`
@@ -20,16 +20,8 @@ const Title = styled.h1`
 
 const Date = styled.div`
   font-size: 14px;
-  margin: 12px 0;
+  margin-top: 6px;
   color: var(--base-grey);
-`;
-
-const TagList = styled.div``;
-
-const TagItem = styled.a`
-  font-size: 14px;
-  margin-right: 15px;
-  color: var(--base-color);
 `;
 
 const PostListItem: FunctionComponent<PostProps> = function ({ contents }) {
@@ -47,14 +39,8 @@ const PostListItem: FunctionComponent<PostProps> = function ({ contents }) {
         <Title>{title}</Title>
       </Link>
 
-      <Date>{`${year}년 ${month}월 ${day}일`}</Date>
-      <TagList>
-        {tags.map((tag: string) => (
-          <Link to={`/search?tag=${tag.replace(" ", "")}`}>
-            <TagItem key={tag}>#{tag}</TagItem>
-          </Link>
-        ))}
-      </TagList>
+      <Date>{`${year}. ${month}. ${day}`}</Date>
+      <TagList tags={tags} />
     </ItemWrapper>
   );
 };

@@ -5,12 +5,6 @@ import styled from "@emotion/styled";
 export type PostProps = {
   posts: object[];
 };
-const Line = styled.hr`
-  width: 100%;
-  border: none;
-  border: 0.3px solid var(--base-dark);
-  margin-top: 20px;
-`;
 
 const PostListWrapper = styled.div`
   width: 100%;
@@ -21,7 +15,7 @@ const PostCardList: FunctionComponent<PostProps> = function ({ posts }) {
     <PostListWrapper>
       {posts.map((post, idx) => (
         <div>
-          <Line />
+          {idx > 0 && <hr />}
           <PostCard key={idx} contents={post} />
         </div>
       ))}

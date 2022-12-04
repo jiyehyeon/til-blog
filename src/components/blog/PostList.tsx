@@ -3,7 +3,7 @@ import PostListItem from "./PostListItem";
 import styled from "@emotion/styled";
 
 export type PostProps = {
-  posts: object[];
+  posts: any[];
 };
 
 const PostListWrapper = styled.div`
@@ -11,11 +11,18 @@ const PostListWrapper = styled.div`
   max-width: 780px;
 `;
 
+const Line = styled.hr`
+  margin: 35px 0 25px 0;
+`;
+
 const PostList = function ({ posts }: PostProps) {
   return (
     <PostListWrapper>
       {posts.map((post, idx) => (
-        <PostListItem key={idx} contents={post} />
+        <>
+          <PostListItem key={post.title} contents={post} />
+          {idx < posts.length - 1 && <Line />}
+        </>
       ))}
     </PostListWrapper>
   );

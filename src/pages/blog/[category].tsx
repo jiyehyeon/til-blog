@@ -17,7 +17,7 @@ type BlogPageProps = {
 const PageWrapper = styled.div`
   display: flex;
   width: 1020px;
-  padding-top: 20px;
+  padding-top: 35px;
 
   @media (max-width: 600px) {
     display: block;

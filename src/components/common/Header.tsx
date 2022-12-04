@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 
@@ -15,6 +16,7 @@ const HeaderWrapper = styled.header`
 
   /* Color */
   background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.03);
 `;
 
 const InnerWrapper = styled.div`
@@ -26,33 +28,38 @@ const InnerWrapper = styled.div`
 
 const Logo = styled.div`
   font-weight: 800;
+  font-size: 16px;
+  color: var(--base-dark);
 `;
 
 const Navigation = styled.div`
-  font-size: 15px;
+  font-size: 16px;
 `;
 
 const NavigationItem = styled(Link)<{ active: boolean }>`
-  color: ${({ active }) => (active ? "var(--base-color)" : "var(--base-dark)")};
-  font-weight: ${({ active }) => (active ? "800" : "400")};
   margin: 0 20px;
+  color: ${({ active }) => (active ? "var(--base-dark)" : "var(--base-grey)")};
+  font-weight: ${({ active }) => (active ? "800" : "400")};
+
+  transition: ease-in 0.2s;
   &:hover {
-    color: var(--base-color);
+    color: var(--base-dark);
   }
 `;
 
 const NavigationLinkItem = styled.a`
-  color: var(--base-dark);
+  color: var(--base-grey);
+  transition: ease-in 0.2s;
 
   &:hover {
-    color: var(--base-color);
+    color: var(--base-dark);
   }
 `;
 
 const MENUITEMS: { [key: string]: string } = {
-  "blog/all": "TODAY I LEARNED",
-  projects: "PROJECTS",
-  about: "ABOUT",
+  "blog/all": "Blog",
+  // projects: "PROJECTS",
+  // about: "ABOUT",
   // book: "📚",
   // intro: "🧏🏻‍♂️",
 };
@@ -68,18 +75,27 @@ const Header: FunctionComponent<HeaderProps> = function ({ path }) {
     <HeaderWrapper>
       <InnerWrapper>
         <Link to={"/"}>
-          <Logo>JIYE HYEON ⓒ</Logo>
+          <Logo>JIYEHYEON</Logo>
         </Link>
         <Navigation>
           {Object.entries(MENUITEMS).map(([id, title]) => (
-            <NavigationItem key={id} to={`/${id}`} active={path.includes(id)}>
+            <NavigationItem
+              key={id}
+              to={`/${id}`}
+              active={
+                path.includes(id) || (title == "Blog" && path.includes("blog"))
+              }
+            >
               {title}
             </NavigationItem>
           ))}
+          <NavigationLinkItem
+            href="https://github.com/jiyehyeon"
+            target="_blank"
+          >
+            Github
+          </NavigationLinkItem>
         </Navigation>
-        <NavigationLinkItem href="https://github.com/jiyehyeon" target="_blank">
-          Github
-        </NavigationLinkItem>
       </InnerWrapper>
     </HeaderWrapper>
   );

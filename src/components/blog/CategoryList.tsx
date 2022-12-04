@@ -20,11 +20,15 @@ const CategoryListWrapper = styled.div`
 `;
 
 const CategoryItem = styled.div<{ selected: boolean }>`
-  color: ${({ selected }) =>
-    selected ? "var(--base-color)" : "var(--base-dark)"};
-  font-weight: ${({ selected }) => (selected ? "700" : "400")};
+  color: var(--base-dark);
+  font-weight: ${({ selected }) => (selected ? "800" : "400")};
   font-size: 16px;
   margin-bottom: 16px;
+  transition: ease-in 0.1s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 export type CategoryListProps = {

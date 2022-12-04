@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../../components/common/Layout";
 import styled from "@emotion/styled";
 import { Comments } from "../../../components/blog/Comments";
@@ -22,12 +22,6 @@ const PageWrapper = styled.main`
   width: 100%;
   display: flex;
   justify-content: center;
-
-  & hr {
-    margin: 30px 0 15px 0;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
-  }
 
   & blockquote {
     margin: 10px 0px 10px 0px;
@@ -68,6 +62,7 @@ const Date = styled.p`
 `;
 
 const ContentSection = styled.section`
+  padding-bottom: 15px;
   & h2 {
     font-size: 24px;
   }
