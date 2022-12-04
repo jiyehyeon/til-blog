@@ -69,8 +69,6 @@ type HeaderProps = {
 };
 
 const Header: FunctionComponent<HeaderProps> = function ({ path }) {
-  console.log(path);
-
   return (
     <HeaderWrapper>
       <InnerWrapper>

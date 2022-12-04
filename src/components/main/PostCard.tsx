@@ -66,7 +66,6 @@ const PostCard: FunctionComponent<PostProps> = function ({ contents }) {
     .split("/")
     .pop()
     .replace(".md", "");
-  console.log(contents);
 
   return (
     <PostCardWrapper>

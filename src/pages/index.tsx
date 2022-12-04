@@ -39,7 +39,6 @@ const Heading = styled.h1`
 
 const IndexPage = function ({ location, data }: any) {
   const posts = data.allMarkdownRemark.edges;
-  console.log(posts);
 
   return (
     <Layout path={location.pathname}>

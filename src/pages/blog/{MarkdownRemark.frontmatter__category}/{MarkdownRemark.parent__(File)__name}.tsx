@@ -90,7 +90,6 @@ const Category = styled.h1`
 const BlogPost = ({ data }: BlogPostProps) => {
   const post = data.markdownRemark.frontmatter;
   const category = data.markdownRemark.fileAbsolutePath.split("/").slice(-2)[0];
-  console.log(category);
   const [month, day, year] = post.date.split("-");
 
   return (

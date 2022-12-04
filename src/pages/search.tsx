@@ -50,7 +50,6 @@ const BlogPage = ({ data, location }: BlogPageProps) => {
   }
 
   if (q) {
-    console.log(allPosts[0].node);
     posts = allPosts.filter(
       (post: any) =>
         post.node.excerpt.includes(q) ||
