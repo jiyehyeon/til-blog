@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "../../style/GlobalStyle";
 import styled from "@emotion/styled";
 
 type LayoutProps = {
