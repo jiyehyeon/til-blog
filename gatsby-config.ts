@@ -3,6 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `DevLog`,
+    description: `오늘 공부한 내용을 기록합니다.`,
     siteUrl: `https://jiyehyeon.netlify.app/`,
     author: `@jiyehyeon`,
   },
