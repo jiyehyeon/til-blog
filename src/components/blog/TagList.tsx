@@ -13,7 +13,7 @@ const TagListWrapper = styled.div`
   margin-top: 15px;
 `;
 
-const TagItem = styled.a`
+const TagItem = styled(Link)`
   display: inline-block;
   margin-top: 5px;
   font-weight: 400;
@@ -35,9 +35,9 @@ const TagList = function ({ tags }: TagListProps) {
   return (
     <TagListWrapper>
       {tags.map((tag: string) => (
-        <Link to={`/search?tag=${tag.replaceAll(" ", "")}`}>
-          <TagItem key={tag}>{tag}</TagItem>
-        </Link>
+        <TagItem to={`/search?tag=${tag.replaceAll(" ", "")}`} key={tag}>
+          {tag}
+        </TagItem>
       ))}
     </TagListWrapper>
   );
