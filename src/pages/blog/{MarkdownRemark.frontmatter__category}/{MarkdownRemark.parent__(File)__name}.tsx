@@ -73,10 +73,21 @@ const ContentSection = styled.section`
   & h2 {
     font-size: 24px;
   }
+  & h2,
+  h3 {
+    line-height: 2.8;
+    margin-top: 15px;
+  }
   line-height: 1.8;
   font-size: 16px;
   li {
     margin-left: 1em;
+  }
+  .language-text {
+    font-size: 14px;
+    margin-right: 5px;
+    color: #eb5757;
+    padding: 3px 5px;
   }
   aside {
     background-color: var(--pastel-background);
